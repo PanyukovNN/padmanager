@@ -1,0 +1,13 @@
+version: '3.3'
+
+volumes:
+  postgres_volume:
+
+services:
+  pdfmanager:
+    build: .
+    container_name: pdfmanager
+    ports:
+      - "7775:7775"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
